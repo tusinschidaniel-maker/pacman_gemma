@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Smooth Pacman</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Canvas size will be managed by JS for map rendering, but we'll set a default -->
+        <canvas id="gameCanvas" width="560" height="620"></canvas>
+        
+        <div class="score-container">
+            <div id="scoreDisplay" class="score-display">0</div>
+            <div id="highScoreDisplay" class="high-score-display pixelated">HI: 0</div>
+        </div>
+
+        <div id="startScreen" class="overlay">
+            <div class="glass-panel">
+                <h1>PACMAN</h1>
+                <p>Use Arrow Keys or Swipe to move</p>
+                <button id="startBtn">Start Game</button>
+            </div>
+        </div>
+
+        <div id="gameOverScreen" class="overlay hidden">
+            <div class="glass-panel">
+                <h2 id="gameOverTitle">Game Over</h2>
+                <div class="score-board">
+                    <div class="score-item">
+                        <span>Score</span>
+                        <span id="finalScore" class="score-value">0</span>
+                    </div>
+                </div>
+                <button id="restartBtn">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
